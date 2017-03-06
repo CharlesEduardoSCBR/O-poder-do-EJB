@@ -20,11 +20,11 @@ public class AutorDao {
 	public void salva(Autor autor) {
 		System.out.println("[INFO] Salvando o Autor " + autor.getNome());
 
-		try {
+		/*try {
 			Thread.sleep(20000); // 20 segundos
 		} catch (InterruptedException e) {
 			e.printStackTrace();
-		}
+		}*/
 
 		banco.save(autor);
 

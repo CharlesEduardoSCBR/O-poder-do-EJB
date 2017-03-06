@@ -13,7 +13,9 @@ public class AutorBean {
 	
 	@Inject
 	private Autor autor;
-	private AutorDao dao = new AutorDao();
+	
+	@Inject
+	private AutorDao dao;
 	
 	public Autor getAutor() {
 		return autor;

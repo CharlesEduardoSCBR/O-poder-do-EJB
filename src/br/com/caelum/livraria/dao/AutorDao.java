@@ -26,7 +26,7 @@ public class AutorDao {
 	}
 
 	public List<Autor> todosAutores() {
-		return manager.createQuery("SELECT c Autor c", Autor.class).getResultList();
+		return manager.createQuery("SELECT c FROM Autor c", Autor.class).getResultList();
 	}
 
 	public Autor buscaPelaId(Integer autorId) {

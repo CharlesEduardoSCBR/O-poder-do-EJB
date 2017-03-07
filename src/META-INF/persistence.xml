@@ -6,7 +6,7 @@
 
 	<persistence-unit name="livraria">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
-		
+	
 		<jta-data-source>java:/livrariaDS</jta-data-source>
 		
 		<class>br.com.caelum.livraria.modelo.Autor</class>

@@ -10,7 +10,7 @@ import br.com.caelum.livraria.modelo.Usuario;
 public class UsuarioDao {
 
 	@Inject
-	private Banco banco;;
+	private Banco banco;
 
 	public Usuario buscaPeloLogin(String login) {
 		return this.banco.buscaPeloNome(login);

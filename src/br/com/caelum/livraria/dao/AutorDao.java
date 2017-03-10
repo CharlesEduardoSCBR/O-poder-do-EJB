@@ -25,7 +25,7 @@ public class AutorDao {
 		System.out.println("[INFO] AutorDao foi criado.");
 	}
 
-	@TransactionAttribute(TransactionAttributeType.REQUIRED)
+	@TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
 	public void salva(Autor autor) {
 		manager.persist(autor);
 	}

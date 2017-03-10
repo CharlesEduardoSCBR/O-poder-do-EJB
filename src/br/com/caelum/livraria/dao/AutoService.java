@@ -3,6 +3,8 @@ package br.com.caelum.livraria.dao;
 import java.util.List;
 
 import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
 import javax.inject.Inject;
 
 import br.com.caelum.livraria.modelo.Autor;
@@ -13,8 +15,11 @@ public class AutoService {
 	@Inject
 	AutorDao dao;
 	
+	@TransactionAttribute(TransactionAttributeType.REQUIRED)
 	public void adiciona(Autor autor){
 		this.dao.salva(autor);
+		throw new RuntimeException(
+                "[ERRO] Erro lançado para testar o rollback da transação.");
 	}
 	
 	public List<Autor> todosAutores(){

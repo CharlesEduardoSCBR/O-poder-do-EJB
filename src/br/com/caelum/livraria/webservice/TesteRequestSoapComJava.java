@@ -6,9 +6,9 @@ public class TesteRequestSoapComJava {
 
 	public static void main(String[] args) throws RemoteException {
 		LivrariaWS cliente = new LivrariaWSProxy();
-		
+
 		Livro[] livros = cliente.getLivrosPorTitulo("Arquitetura");
-		
+
 		for (Livro livro : livros) {
 			System.out.println(livro.getTitulo());
 			System.out.println(livro.getAutor().getNome());
